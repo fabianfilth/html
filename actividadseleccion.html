@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8"/>
+	<meta description="Contenido html5"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab"/>
+	<title>Actividad Selección</title>
+	
+</head>
+
+<body>
+<nav>
+		<ul class="menu">
+			<li><a href="inicio.html" class="menu">Inicio</a></li>
+			<li><a href="actividades.html" class="menu">Actividades</a></li>
+		</ul>
+	</nav>	
+
+<section id="section">
+    <h1>Ordenamiento por Selección (Selectionsort)</h1>
+	<h2>Descripción</h2>
+	Este Algoritmo también es sencillo y consiste en lo siguiente:
+
+	*Buscas el elemento más pequeño de la lista
+	*Lo intercambias con el elemento ubicado en la primera posición de la lista
+	*Buscas el segundo elemento más pequeño de la lista
+	*Lo intercambias con el elemento que ocupa la segunda posición en la lista
+	*Repites el proceso hasta que la lista esté ordenada
+
+
+	<h3>Ejemplo</h3>
+
+	Vamos a ordenar la siguiente lista (la misma del ejemplo de Burbuja):<br>
+
+	4 - 3 - 5 - 2 - 1<br>
+
+	Comenzamos buscando el elemento menor entre la primera y última posición. Es el 1. Lo intercambiamos con el 4 y la lista queda así:<br>
+
+	1 - 3 - 5 - 2 - 4<br>
+
+	Ahora buscamos el menor elemento entre la segunda y la última posición. Es el 2. Lo intercambiamos con el elemento en la segunda posición, es decir el 3. La lista queda así:<br>
+
+	1 - 2 - 5 - 3 - 4<br>
+
+	Buscamos el menor elemento entre la tercera posición (sí, adivinaste :-D) y la última. Es el 3, que intercambiamos con el 5:<br>
+
+	1 - 2 - 3 - 5 - 4<br>
+
+	El menor elemento entre la cuarta y quinta posición es el 4, que intercambiamos con el 5:<br>
+
+	1 - 2 - 3 - 4 - 5<br>
+
+	¡Y terminamos! Ya tenemos nuestra lista ordenada. ¿Fue fácil no?<br>
+
+
+	<h2>Analizando el Algoritmo</h2>
+
+	Este es un algoritmo lento. No obstante, ya que sólo realiza un intercambio en cada ejecución del ciclo externo, puede ser una buena opción para listas con registros grandes y claves pequeñas. Si miras el programa de demostración notarás que es el más rápido en la parte gráfica (por lo menos en un PC lento y con una tarjeta gráfica mala como el mío x-|). La razón es que es mucho más lento dibujar las barras que comparar sus largos (el desplazamiento es más costoso que la comparación), por lo que en este caso especial puede vencer a algoritmos como Quicksort.
+
+	Ventajas:<br>
+
+	*Fácil implementación.<br>
+	*No requiere memoria adicional.<br>
+	*Realiza pocos intercambios.<br>
+	*Rendimiento constante: poca diferencia entre el peor y el mejor caso.<br>
+
+	Desventajas:<br>
+
+	*Lento.<br>
+	*Realiza numerosas comparaciones.<br>
+</section>
+
+</body>

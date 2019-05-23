@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8"/>
+	<meta description="Contenido html5"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab"/>
+	<title>Selección</title>
+	
+</head>
+
+<body>
+	<nav>
+     <ul class="menu">
+          <li> <a href= "lecturas.html" class="menu">Lecturas </a></li>
+          <li> <a href= "inicio.html" class="menu">Inicio </a></li>        
+     </ul>
+    </nav>
+ <section id="section">
+	
+ 	
+ 		<h1>Ordenamiento por Selección</h1>
+ 		
+ 		Es un algoritmo de ordenamiento que requiere O operaciones para ordenar una lista de n elementos.
+        Su funcionamiento es el siguiente:
+
+
+       •	Buscar el mínimo elemento de la lista
+       •	Intercambiarlo con el primero
+       •	Buscar el mínimo en el resto de la lista
+       •	Intercambiarlo con el segundo
+
+       Y en general:
+
+       •	Buscar el mínimo elemento entre una posición i y el final de la lista
+       •	Intercambiar el mínimo con el elemento de la posición i
+       De esta manera se puede escribir el siguiente pseudocódigo para ordenar una lista de n elementos indexados desde el 1:
+
+
+       para i=1 hasta n-1
+         minimo = i;
+       para j=i+1 hasta n
+        si lista[j] < lista[minimo] entonces
+            minimo = j /* (!) */
+        fin si
+       fin para
+         intercambiar(lista[i], lista[minimo])
+       fin para 
+
+
+        <figure id="section">
+ 		<center><img src="imagenes/MetododeSeleccion.gif"></center>
+ 		<center><figcaption id="section">
+ 		    Ibarra, A. (2019). Selectionsort. [imagen] Recuperado de: https://andresibarra.files.wordpress.com/2013/04/selectionsort2.gif?w=80&h=300 [Accedido 2 Abr. 2019].
+ 		</figcaption></center>
+ 	</figure>
+
+ 	Ejemplo:<br>
+
+ 	Seleccion <br>
+	#include&lt;stdio.h> <br>
+	#include&lt;conio.h> <br>
+	int x[4]={1,4,8,6}; <br>
+	int n=4,j=0,i=0; <br>
+	int temp=0,minimo=0; <br>
+	void main(){ <br>
+	clrscr(); <br>
+	for(i=0;i&lt;n-1;i++) <br>
+	{ <br>
+	minimo=i; <br>
+	for(j=i+1;j&lt;n;j++) <br>
+	{ <br>
+	if(x[minimo] > x[j]) <br>
+	{ <br>
+	minimo=j; <br>
+	} <br>
+	} <br>
+	temp=x[minimo]; <br>
+	x[minimo]=x; <br>
+	x=temp; <br>
+	} <br>
+	for(i=0;i&lt;n;i++) <br>
+	{ <br>
+	printf("%d",x); <br>
+	} <br>
+	getch(); <br>
+	}<br>
+
+ 	
+ </section>
+</body>

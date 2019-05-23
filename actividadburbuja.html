@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8"/>
+	<meta description="Contenido html5"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab"/>
+	<title>Actividad Burbuja</title>
+	
+</head>
+
+<body>
+	<nav>
+		<ul class="menu">
+			<li><a href="inicio.html" class="menu">Inicio</a></li>
+			<li><a href="actividades.html" class="menu">Actividades</a></li>
+		</ul>
+	</nav>
+
+<section id="section">
+	<h1>Ordenamiento Burbuja (Bubblesort)</h1>
+	<h2>Descripción</h2>
+	Este es el algoritmo más sencillo probablemente. Ideal para empezar. Consiste en ciclar repetidamente a través de la lista,
+    comparando elementos adyacentes de dos en dos. Si un elemento es mayor que el que está en la siguiente posición se intercambian. ¿Sencillo no?
+
+
+
+    <h3>Ejemplo</h3>
+
+    Vamos a ver un ejemplo. Esta es nuestra lista:<br>
+
+	4 - 3 - 5 - 2 - 1<br>
+
+	Tenemos 5 elementos. Comenzamos comparando el primero con el segundo elemento. 4 es mayor que 3, así que intercambiamos. Ahora tenemos:<br>
+
+	3 - 4 - 5 - 2 - 1<br>
+
+	Ahora comparamos el segundo con el tercero: 4 es menor que 5, así que no hacemos nada. Continuamos con el tercero y el cuarto: 5 es mayor que 2. Intercambiamos y obtenemos:<br>
+
+	3 - 4 - 2 - 5 - 1<br>
+
+	Comparamos el cuarto y el quinto: 5 es mayor que 1. Intercambiamos nuevamente:<br>
+
+	3 - 4 - 2 - 1 - 5<br>
+
+	Repitiendo este proceso vamos obteniendo los siguientes resultados:<br>
+
+	3 - 2 - 1 - 4 - 5<br>
+	2 - 1 - 3 - 4 - 5<br>
+	1 - 2 - 3 - 4 - 5<br>
+
+
+
+	<h2>Optimizando el algoritmo</h2>
+
+	Se pueden realizar algunos cambios en este algoritmo que pueden mejorar su rendimiento.
+
+	Si observas bien, te darás cuenta que en cada pasada a través de la lista un elemento va quedando en su posición final. Si no te queda claro mira el ejemplo de arriba. En la primera pasada el 5 (elemento mayor) quedó en la última posición, en la segunda el 4 (el segundo mayor elemento) quedó en la penúltima posición. Podemos evitar hacer comparaciones innecesarias si disminuimos el número de éstas en cada pasada. Tan sólo hay que cambiar el ciclo interno de esta manera:
+
+	for (j=0; j &lt; TAM - i; j++)<br>
+
+	Puede ser que los datos queden ordenados antes de completar el ciclo externo. Podemos modificar el algoritmo para que verifique si se han realizado intercambios. Si no se han hecho entonces terminamos con la ejecución, pues eso significa que los datos ya están ordenados. Te dejo como tarea que modifiques el algoritmo para hacer esto :-).
+	Otra forma es ir guardando la última posición en que se hizo un intercambio, y en la siguiente pasada sólo comparar hasta antes de esa posición.
+
+	Ventajas:<br>
+
+	Fácil implementación.<br>
+	No requiere memoria adicional.<br>
+
+	Desventajas:<br>
+
+	Muy lento.<br>
+	Realiza numerosas comparaciones.<br>
+	Realiza numerosos intercambios<br>
+
+</section>
+</body>

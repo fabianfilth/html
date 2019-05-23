@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta description="Contenido html5"/>
+    <link  rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab"/>
+	<title>Burbuja</title>
+	 
+</head>
+
+<body>
+
+	<nav>
+     <ul class="menu">
+          <li> <a href= "lecturas.html" class="menu">Lecturas </a></li>
+          <li> <a href= "inicio.html" class="menu">Inicio </a></li>        
+     </ul>
+    </nav>
+	
+<section id="section">
+	
+ 	
+ 		<h1>Ordenamiento de Burbuja</h1>
+
+ 		Funciona revisando cada elemento de la lista que va a ser ordenada con el siguiente, intercambiándolos de posición si están en el orden equivocado. Es necesario revisar varias veces toda la lista hasta que no se necesiten más intercambios, lo cual significa que la lista está ordenada
+        Este algoritmo obtiene su nombre de la forma con la que suben por la lista los elementos durante los intercambios, como si fueran pequeñas "burbujas". También es conocido como el método del intercambio directo. Dado que solo usa comparaciones para operar elementos, se lo considera un algoritmo de comparación, siendo el más sencillo de implementar.
+        
+    <p><figure id="section">
+ 		<center><img src="imagenes/MetododeBurbuja.png"></center>
+ 		<center><figcaption id="section">
+ 		     Ibarra, A. (2019). Burbuja. [imagen] Recuperado de: https://andresibarra.files.wordpress.com/2013/04/burbuja.png?w=300&h=218 [Accedido 2 Abr. 2019].
+ 		</figcaption></center>
+ 	</figure>
+ 	    </p> 
+ 	    
+ 	Ejemplo:<br>
+
+ 	Burbuja <br>
+    #include<stdio.h> <br>
+    #include<conio.h> <br>
+    int a[3]={3,2,1}; <br>
+    int i,j,aux,n=3; <br>
+    void main(){ <br>
+    clrscr(); <br>
+    for(i=0;i<=n;i++){ <br>
+    if(a[j]>a[j+1]){ <br>
+    aux=a[j]; <br>
+    a[j]=a[j+1]; <br>
+    a[j+1]=aux; <br>
+    } <br>
+    } <br>
+    } <br>
+    for(i=0;i<3;i++) <br>
+    { <br>
+    printf("%d",a); <br>
+    } <br>
+    getch(); <br>
+    } <br>
+
+
+    
+ 	
+ </section>
+
+</body>

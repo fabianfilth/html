@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8"/>
+	<meta description="Contenido html5"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab"/>
+	<title>Inserción</title>
+	
+</head>
+
+<body>
+	<nav>
+     <ul class="menu">
+          <li> <a href= "lecturas.html" class="menu"> Lecturas </a></li>
+          <li> <a href= "inicio.html" class="menu">Inicio </a></li>        
+     </ul>
+    </nav>
+
+<section id="section" >
+ 	
+ 		<h1>Ordenamiento por Inserción</h1>
+ 		
+ 		Es una manera muy natural de ordenar para un ser humano, y puede usarse fácilmente para ordenar un mazo de cartas numeradas en forma arbitraria. Requiere O(n²) operaciones para ordenar una lista de n elementos.  
+        Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay k elementos ordenados de menor a mayor, se toma el elemento k+1 y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha) o cuando ya no se encuentran elementos (todos los elementos fueron desplazados y este es el más pequeño). En este punto se inserta el elemento k+1 debiendo desplazarse los demás elementos.
+
+        <figure id="section">
+ 		<center><img src="imagenes/MetododeInsercion.gif"></center>
+ 		<center><figcaption id="section">
+ 		    Ibarra, A. (2019). Insertionsort. [imagen] Recuperado de: https://andresibarra.files.wordpress.com/2013/04/insertionsort.gif?w=645 [Accedido 2 Abr. 2019].
+ 		</figcaption></center>
+ 	</figure>
+
+ 	
+
+   
+ 	Ejemplo:<br>
+
+ 	Insercion <br>
+    #include&lt;stdio.h> <br>
+    #include&lt;conio.h> <br>
+    int a[4]={4,1,7,2}; <br>
+    int n=4; <br>
+    int i,j,aux; <br>
+    void main(){ <br>
+    clrscr(); <br>
+    for(i=1;i&lt;n;i++) <br>
+    { <br>
+    j=i; <br>
+    aux=a; <br>
+    while(j>0 && aux&lt;a[j-1]) <br>
+    { <br>
+    a[j]=a[j-1]; <br>
+    j--; <br>
+    } <br>
+    a[j]=aux; <br>
+    } <br>
+    for(i=0;i<4;i++) <br>
+    { <br>
+    printf("%d",a); <br>
+    } <br>
+    getch(); <br>
+    } <br>
+
+ </section>	
+</body>

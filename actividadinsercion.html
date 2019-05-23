@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8"/>
+	<meta description="Contenido html5"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab"/>
+	<title>Actividad Inserción</title>
+	
+</head>
+
+<body>
+	<nav>
+		<ul class="menu">
+			<li><a href="inicio.html" class="menu">Inicio</a></li>
+			<li><a href="actividades.html" class="menu">Actividades</a></li>
+		</ul>
+	</nav>
+
+<section id="section">
+	<h1>Ordenamiento por Inserción (Insertionsort)</h1>
+	<h2>Descripción</h2>
+
+	Este algoritmo también es bastante sencillo. ¿Has jugado cartas?. ¿Cómo las vas ordenando cuando las recibes? Yo lo hago de esta manera: tomo la primera y la coloco en mi mano. Luego tomo la segunda y la comparo con la que tengo: si es mayor, la pongo a la derecha, y si es menor a la izquierda (también me fijo en el color, pero omitiré esa parte para concentrarme en la idea principal). Después tomo la tercera y la comparo con las que tengo en la mano, desplazándola hasta que quede en su posición final. Continúo haciendo esto, insertando cada carta en la posición que le corresponde, hasta que las tengo todas en orden. ¿Lo haces así tu también? Bueno, pues si es así entonces comprenderás fácilmente este algoritmo, porque es el mismo concepto.
+
+	Para simular esto en un programa necesitamos tener en cuenta algo: no podemos desplazar los elementos así como así o se perderá un elemento. Lo que hacemos es guardar una copia del elemento actual (que sería como la carta que tomamos) y desplazar todos los elementos mayores hacia la derecha. Luego copiamos el elemento guardado en la posición del último elemento que se desplazó.
+	
+
+	<h3>Ejemplo</h3>
+
+	¿Te acuerdas de nuestra famosa lista?<br>
+
+	4 - 3 - 5 - 2 - 1<br>
+
+	temp toma el valor del segundo elemento, 3. La primera carta es el 4. Ahora comparamos: 3 es menor que 4. Luego desplazamos el 4 una posición a la derecha y después copiamos el 3 en su lugar.<br>
+
+	4 - 4 - 5 - 2 - 1<br>
+
+	3 - 4 - 5 - 2 - 1<br>
+
+	El siguiente elemento es 5. Comparamos con 4. Es mayor que 4, así que no ocurren intercambios.<br>
+
+	Continuamos con el 2. Es menor que cinco: desplazamos el 5 una posición a la derecha:<br>
+
+	3 - 4 - 5 - 5 - 1<br>
+
+	Comparamos con 4: es menor, así que desplazamos el 4 una posición a la derecha:<br>
+	
+	3 - 4 - 4 - 5 - 1<br>
+
+	Comparamos con 3. Desplazamos el 3 una posición a la derecha:<br>
+
+	3 - 3 - 4 - 5 - 1<br>
+
+	Finalmente copiamos el 2 en su posición final:<br>
+
+	2 - 3 - 4 - 5 - 1<br>
+
+	El último elemento a ordenar es el 1. Cinco es menor que 1, así que lo desplazamos una posición a la derecha:<br>
+
+	2 - 3 - 4 - 5 - 5<br>
+
+	Continuando con el procedimiento la lista va quedando así:<br>
+
+	2 - 3 - 4 - 4 - 5<br>
+
+	2 - 3 - 3 - 4 - 5<br>
+
+	2 - 2 - 3 - 4 - 5<br>
+<
+	1 - 2 - 3 - 4 - 5<br>
+
+	Espero que te haya quedado claro.<br>
+
+
+
+
+	<h2>Analizando el Algoritmo</h2>
+
+	Estabilidad: Este algoritmo nunca intercambia registros con claves iguales. Por lo tanto es estable.
+	Requerimientos de Memoria: Una variable adicional para realizar los intercambios.
+	Tiempo de Ejecución: Para una lista de n elementos el ciclo externo se ejecuta n-1 veces. El ciclo interno se ejecuta como máximo una vez en la primera iteración, 2 veces en la segunda, 3 veces en la tercera, etc. Esto produce una complejidad O(n2).
+
+	Ventajas:<br>
+
+	*Fácil implementación.<br>
+	*Requerimientos mínimos de memoria.<br>
+
+	Desventajas:<br>
+
+	*Lento.<br>
+	*Realiza numerosas comparaciones.<br>
+
+	Este también es un algoritmo lento, pero puede ser de utilidad para listas que están ordenadas o semiordenadas, porque en ese caso realiza muy pocos desplazamientos.<br>
+
+</section>
+	
+</body>
